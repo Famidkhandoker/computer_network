@@ -1,0 +1,109 @@
+
+Class A:
+Range: 0-127
+Fixed bit = 0
+Net bits = 8
+Host bits = 24
+
+Available/new net bits = net bits - number of fixed bit = 8-1 = 7
+Total network addresses = 2^7 = 128
+total host addresses = 2^24 = 16777216
+total available host addresses = 2^24 -2 = 16777216-2 = 16777214
+
+Total addresses = 128*16777214 = 2147483392
+
+0000 0000. 0000 0000.0000 0000.0000 0000
+0000 0000. 0000 0000.0000 0000.0000 0001
+0000 0000. 0000 0000.0000 0000.0000 0010
+.
+.
+0000 0000. 1111 1111.1111 1111.1111 1111
+
+
+Class B: 
+
+Range :128-191
+Fixed bits= 10
+Net bits= 16
+Host bits= 16
+Available net bits=net bits-number of fixed bits= 16-2 = 14
+Total network address = 2^14 =16384
+Total host address = 2^16 =65536
+Total available host address = 2^16 - 2 =65534
+Total address = 16384*65534 =1073709056
+
+Class C: 
+
+Range :192-223
+Fixed bits= 110
+Net bits= 24
+Host bits= 8
+Available net bits=net bits-number of fixed bits= 24-3 = 21
+Total network address = 2^21 =2097152
+Total host address = 2^8 =256
+Total available host address = 2^8 - 2 = 254
+Total address = 2097152*254= 532676608 
+
+
+
+
+Default Masks:
+
+Class A: 1111 1111.0000 0000.0000 0000.0000 0000
+Class B: 1111 1111.1111 1111.0000 0000.0000 0000
+Class C: 1111 1111.1111 1111.1111 1111.0000 0000
+
+Class A: 255.0.0.0
+Class B: 255.255.0.0
+Class C: 255.255.255.0
+
+
+
+Class C:
+192.160.2.0
+
+1st :
+192.160.2.0000 0000
+2nd:
+192.160.2.0000 0001
+3rd:
+192.160.2.0000 0010
+4th:
+192.160.2.0000 0011
+5th:
+192.160.2.0000 0100
+
+.
+.
+254
+192.160.2.1111 1111
+
+
+Class B:
+150.100.0.0
+
+1st:
+150.100.0000 0000.0000 0000
+2nd:
+150.100.0000 0000.0000 0001
+3rd:
+150.100.0000 0000.0000 0010
+.
+.
+514th:
+150.100.0000 0010.0000 0001 = 150.100.2.1
+
+739th
+150.100.0000 0010.1110 0010 = 150.100.2.226
+
+32345th
+41222th
+739th
+
+
+
+
+
+
+
+
