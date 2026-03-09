@@ -1,0 +1,142 @@
+Subnetting:
+
+Rule-1
+
+->Minimum no. of groups/subnet=5  // 2^2 =4 (Since we need 5 subnets, we must choose a number of subnets greater than or equal to 5)
+				 // 2^3= 8 ->3 bits(subnet bits)
+->Minimum 20 hosts per group/subnet //2^4 =16 (Since we need 20 hosts per subnet, we must choose a number of hosts greater than or equal to 20)
+				    //2^5 =32 ->5 bits(hosts bits)
+->show all subnet addresses-
+
+class C
+Range:192-223
+Network address=24
+Host address=8
+
+215.200.100.0(last 8 bit 000 00000)
+				
+1st:
+Minimum:215.200.100.000 00000 = 215.200.100.0
+Maximum:215.200.100.000 11111 = 215.200.100.31
+
+2nd:
+Minimum:215.200.100.001 00000 = 215.200.100.32
+Maximum:215.200.100.001 11111 = 215.200.100.63
+
+3rd:
+Minimum:215.200.100.010 00000 = 215.200.100.64
+Maximum:215.200.100.010 11111 = 215.200.100.95
+
+4th:
+Minimum:215.200.100.011 00000 = 215.200.100.96
+Maximum:215.200.10011 11111 = 215.200.100.63.127 
+.
+.
+.
+.
+.
+.
+8th:
+
+Total pc ip address supply= 8*32=256
+
+
+Rule-2
+
+205.100.10.0/26
+
+Class C
+
+->Net bits =24
+->Subnet bits =26-24=2
+->Host bits =8
+->New host bits =8-2=6
+
+
+1st:
+Minimum:205.100.10.00 000000 =205.100.10.0
+Maximum:205.100.10.00 111111 =205.100.10.63
+
+2nd:
+Minimum:205.100.10.01 000000 =205.100.10.64
+Maximum:205.100.10.01 111111 =205.100.10.127
+
+3rd:
+Minimum:205.100.10.10 000000 =205.100.10.128
+Maximum:205.100.10.10 111111 =205.100.10.191
+
+4th:
+Minimum:205.100.10.11 000000 =205.100.10.192
+Maximum:205.100.10.11 111111 =205.100.10.255
+.
+.
+.
+.
+.
+.
+.
+8th:
+
+
+
+
+Practise:
+
+180.180.0.0/26
+
+Class B
+
+->Net bits= 16
+->Subnet bits=26-16=10
+->Total subnet address=2^10=1024
+->Host bits=16
+->New host bits=16-10=6
+->Total host addresses=2^6=64
+
+1st:
+Minimum:180.180.00000000.00 000000=180.180.0.0
+Maximum:180.180.00000000.00 111111=180.180.0.63
+
+2nd:
+Minimum:180.180.00000000.01 000000=180.180.0.64
+Maximum:180.180.00000000.01 111111=180.180.0.127
+
+
+
+
+Rule-3
+
+Default Mask
+Class A: 255.0.0.0
+Class B: 255.255.0.0
+Class C: 255.255.255.0
+
+
+255.255.255.192 (192 Binary Convert)
+Class C
+->Net Bits =24
+->Host Bits=8
+
+192 =1100 0000 (Jekoyta 1 thakbe sei koytai subnet bits) 
+
+11 subnet bits =2 =2^2= 4
+Host bits =8-2=6 =2^6 =64
+
+1st:
+Minimum:255.255.255.00 000000 =255.255.255.0
+Maximum:255.255.255.00 111111 =255.255.255.63
+
+2nd:
+Minimum:255.255.255.01 000000 =255.255.255.64
+Maximum:255.255.255.01 111111 =255.255.255.127
+
+3rd:
+Minimum:255.255.255.10 000000 =255.255.255.128
+Maximum:255.255.255.10 111111 =255.255.255.191
+
+4th:
+Minimum:255.255.255.11 000000 =255.255.255.192
+Maximum:255.255.255.11 111111 =255.255.255.255
+
+
+
